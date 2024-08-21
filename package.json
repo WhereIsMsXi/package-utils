@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "jest --no-cache --watchAll --coverage"
   },
   "keywords": [
     "cli",
@@ -18,8 +18,11 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
     "rollup": "^4.21.0",
     "rollup-plugin-delete": "^2.0.0",
+    "ts-jest": "^29.2.4",
     "tslib": "^2.6.3",
     "typescript": "^5.5.4"
   }
