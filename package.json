@@ -2,13 +2,19 @@
   "name": "cli-rollup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+
   "scripts": {
     "build": "rollup -c"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "rollup",
+    "typescript"
+  ],
+  "author": "sxt",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
