@@ -1,3 +1,1 @@
-export function print(): string {
-  return 'print';
-}
+export * from './utils';
