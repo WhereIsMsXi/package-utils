@@ -1,6 +1,6 @@
 {
-  "name": "cli-rollup",
-  "version": "1.0.0",
+  "name": "@where_is_mr_li/utils",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,9 +10,9 @@
     "test": "jest --no-cache --watchAll --coverage"
   },
   "keywords": [
-    "cli",
     "rollup",
-    "typescript"
+    "typescript",
+    "utils"
   ],
   "author": "sxt",
   "license": "ISC",
