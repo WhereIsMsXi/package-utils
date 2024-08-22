@@ -1,4 +1,4 @@
-import { to } from '../../src/utils/utils';
+import { to } from '../../src/utils';
 
 const successPromise = Promise.resolve('success');
 const failPromise = Promise.reject('fail');

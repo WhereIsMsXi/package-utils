@@ -1,4 +1,4 @@
-import { removeEmptyProps } from '../../src/utils/utils';
+import { removeEmptyProps } from '../../src/utils';
 
 describe('utils removeEmptyProps', () => {
   it('不能删除对象的非空属性', async () => {

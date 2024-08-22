@@ -1,4 +1,4 @@
-import { mustArray } from '../../src/utils/utils';
+import { mustArray } from '../../src/utils';
 
 describe('utils musstArray', () => {
   it('传入非数组则包成数组', async () => {
