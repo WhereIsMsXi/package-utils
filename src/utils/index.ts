@@ -24,3 +24,21 @@ export function removeEmptyProps<
 export function mustArray(data: unknown) {
   return Array.isArray(data) ? data : [data];
 }
+
+export function hasOwnProperty(
+  obj: Record<string, unknown>, prop: string
+) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+export function randomChar(length = 16, chars?: string) {
+  const defaultChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charSet = chars || defaultChars;
+  
+  let result = '';
+  for (let i = 0; i < length; i += 1) {
+    const randomIndex = Math.floor(Math.random() * charSet.length);
+    result += charSet[randomIndex]
+  }
+  return result;
+}
