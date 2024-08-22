@@ -9,3 +9,17 @@ export function formatBankCard(data: string, mark = '-') {
   }
   return result;
 }
+
+export function formatPhone(phoneNumber: string, mark = '-') {
+  // 清除非数字的字符
+  const tempPhoneNumber = phoneNumber.replace(/\D/g, '');
+  // 是否为 11 位
+  const isValid = /^\d{11}$/.test(tempPhoneNumber );
+  if (!isValid) {
+    throw new Error("Invalid phone number");
+  }
+
+  return tempPhoneNumber.slice(0, 3) + mark +
+    tempPhoneNumber.slice(3, 7) + mark +
+    tempPhoneNumber.slice(7);
+}
