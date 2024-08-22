@@ -18,3 +18,7 @@ export function removeEmptyProps<
     Object.entries(result).filter(([key, value]) => isEmpty(value))
   );
 }
+
+export function mustArray(data: unknown) {
+  return Array.isArray(data) ? data : [data];
+}
