@@ -2,6 +2,22 @@ export function getQuery(name: string) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 }
+export function getQueryString(name: string) {
+  const left = window.location.href.indexOf('?'); // 第一个参数
+  if (left < 0) return undefined;
+  
+  const search = window.location.href.slice(left + 1);
+
+  const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`, 'i');
+  const result = search.match(reg);
+  if (result && result.length > 2) {
+    if (result[2]) {
+      return result[2];
+    }
+    return undefined;
+  }
+  return undefined;
+}
 
 export function isIOS() {
   return !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
