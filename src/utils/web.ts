@@ -30,3 +30,14 @@ export function reloadIOS() {
     }
   };
 }
+
+export function clickEffect(className: '', index = 0) {
+  const doms = document.getElementsByClassName(className);
+  const currentDom = doms[index] as HTMLElement
+  if (currentDom) {
+    currentDom.style.opacity = '0.6'
+    setTimeout(() => {
+      currentDom.style.opacity = '1'
+    }, 50)
+  }
+}
