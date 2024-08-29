@@ -42,3 +42,17 @@ export function randomChar(length = 16, chars?: string) {
   }
   return result;
 }
+
+export function format2KebabCase(camelCased: string): string {
+  if(camelCased.length === 0) return camelCased;
+  
+  const firstChar = camelCased.charAt(0);
+  const isFirstCharUpperCase = firstChar === firstChar.toUpperCase();
+
+  return camelCased.replace(/([A-Z])/g, (match, offset) => {
+    if (isFirstCharUpperCase && offset === 0) {
+      return match.toLowerCase();
+    }
+    return `-${match.toLowerCase()}`;
+  })
+}
