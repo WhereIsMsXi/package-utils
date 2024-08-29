@@ -7,7 +7,7 @@
 github:
 
 ```bash
-git clone https://github.com/WhereIsMsXi/package-utils
+git clone https://github.com/WhereIsMsXi/package-utils.git
 
 cd package-utils
 
