@@ -21,7 +21,7 @@ export function removeEmptyProps<
   );
 }
 
-export function mustArray(data: unknown) {
+export function mustArray<T>(data: T | T[]): T[] {
   return Array.isArray(data) ? data : [data];
 }
 
