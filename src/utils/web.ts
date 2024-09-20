@@ -41,3 +41,11 @@ export function clickEffect(className: '', index = 0) {
     }, 50)
   }
 }
+
+export function hideBodyOverflow(bool: boolean) {
+  if (bool) {
+    document.body.style.overflow = "hidden";
+    return;
+  }
+  document.body.style.overflow = "auto";
+}
